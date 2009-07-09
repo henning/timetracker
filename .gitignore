@@ -1,0 +1,6 @@
+web-app
+test/reports
+webtest/reports
+bin-groovy
+out
+stacktrace.log

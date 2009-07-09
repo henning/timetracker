@@ -1,0 +1,35 @@
+***************
+*** 39,44 ****
+  
+      void initProps () {
+          ant.property(file:        'webtest/conf/webtest.properties')
+          ant.property(environment: 'env')
+          props = ant.antProject.properties
+          grailsHome = props.grailsHome
+--- 39,45 ----
+  
+      void initProps () {
+          ant.property(file:        'webtest/conf/webtest.properties')
++         ant.property(file:        'application.properties')
+          ant.property(environment: 'env')
+          props = ant.antProject.properties
+          grailsHome = props.grailsHome
+***************
+*** 47,54 ****
+          }
+          webtestHome = grailsHome + '/downloads/webtest'
+          props.projectName = new File('.').absolutePath.tokenize('./\\')[-1]
+-         if (! props.webtest_basepath) props.webtest_basepath = props.projectName
+-         println 'Testing ' + props.projectName
+      }
+  
+     // prepare a configmap based on webtest.properties
+--- 48,55 ----
+          }
+          webtestHome = grailsHome + '/downloads/webtest'
+          props.projectName = new File('.').absolutePath.tokenize('./\\')[-1]
++         if (! props.webtest_basepath) props.webtest_basepath = props.'app.name'
++         println 'Testing ' + props.'app.name'
+      }
+  
+     // prepare a configmap based on webtest.properties

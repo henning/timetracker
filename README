@@ -1,0 +1,5 @@
+Simple grails based time tracking app.
+
+install grails and just do grails run-app to look into it!
+
+for questions, check github: http://github.com/henning/timetracker
